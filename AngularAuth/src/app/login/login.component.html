@@ -1,0 +1,13 @@
+<!-- <p>login works!</p> -->
+
+<div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <label>user</label>
+        <input formControlName="OPER_login" type="text" placeholder="..." required>
+
+        <label>pass</label>
+        <input formControlName="OPER_senha" type="password" placeholder="..." required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>

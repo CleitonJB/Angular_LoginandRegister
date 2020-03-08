@@ -1,0 +1,13 @@
+<!-- <p>register works!</p> -->
+
+<div>
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <label>usuario</label>
+        <input type="text" formControlName="OPER_login" placeholder="..." required>
+
+        <label>senha</label>
+        <input type="password" formControlName="OPER_senha" placeholder="..." required>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
