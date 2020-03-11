@@ -1,12 +1,15 @@
 <!-- <p>register works!</p> -->
 
 <div>
-    <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <form #rgForm="ngForm" (ngSubmit)="register()">
         <label>usuario</label>
-        <input type="text" formControlName="OPER_login" placeholder="..." required>
+        <input type="text" name="OPER_login" [(ngModel)]="registerForm.OPER_login" #OPER_login="ngModel" required>
+
+        <label>operador</label>
+        <input type="text" name="OPER_nome_operador" [(ngModel)]="registerForm.OPER_nome_operador" #OPER_nome_operador="ngModel" required>
 
         <label>senha</label>
-        <input type="password" formControlName="OPER_senha" placeholder="..." required>
+        <input type="password" name="OPER_senha" [(ngModel)]="registerForm.OPER_senha" #OPER_senha="ngModel" required>
 
         <button type="submit">Submit</button>
     </form>
